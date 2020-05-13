@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# db/seeds.rb
+puts "Cleaning database..."
+Restaurant.destroy_all
+
+puts "Creating restaurants..."
+dishoom = { name: "Surpriz", address: "7 Boundary St, London E2 7JE", category: "italian", phone_number:"0610184323" }
+Restaurant.create!(dishoom)
+puts "Finished!"
